@@ -1,3 +1,25 @@
 html {
   background: peachpuff;
 }
+
+header {
+  width: 100%;
+  padding: 20px;
+}
+
+.App {
+  height: 100vh;
+  position: relative;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+  padding: 5px 0;
+}

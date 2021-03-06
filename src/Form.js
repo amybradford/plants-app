@@ -5,10 +5,10 @@ function Form() {
         <p>Do you have any pets?</p>
         <input type="radio" id="yesPets"
      name="yes" value="yes"/>
-        <label for="pets">Yes</label>
+        <label htmlFor="pets">Yes</label>
         <input type="radio" id="noPets"
      name="no" value="no"/>
-        <label for="petsNo">No</label>
+        <label htmlFor="petsNo">No</label>
           <div>
             <button type="submit">Click here for a plant!</button>
           </div>

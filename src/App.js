@@ -11,14 +11,27 @@ function App() {
     // create a variable that holds a reference to firebase database
     const dbRef = firebase.database().ref();
     // add an event listener so that it notes everytime there's a change in the database
-    dbRef.on('value', (response) => {
-      // should return an object that has parsed the databse info
-      console.log(response.val());
+    dbRef.on('value', (response) => {      
+      // should return an object that has parsed the database info
+      // console.log(response.val().plants.petSafePlants);
+      // create a variable to store object data
+      const petSafe = response.val().plants.petSafePlants;
+      setPlants([])
+      // create mockArray to turn object data into array so we can loop through
+      const mockArray = [];
+      for (const property in petSafe) {
+        // console.log(object[property])
+        // push values to the page with .push() method
+        mockArray.push(petSafe[property])
+      } 
+     setPlants(mockArray); 
     })
   }, [])
      
   return (
     <div className="App">
+      <Header />
+      <Form /> 
       <ul>
         {plants.map((plant) => {
           return (
@@ -28,8 +41,6 @@ function App() {
           )
         })}
       </ul>
-      <Header />
-      <Form /> 
       <Footer />    
     </div>
         
