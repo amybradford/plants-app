@@ -2,6 +2,7 @@ function Form() {
   return (
     <div>
       <form action="">
+        <p>Do you have any pets?</p>
         <input type="radio" id="yesPets"
      name="yes" value="yes"/>
         <label for="pets">Yes</label>
@@ -9,7 +10,7 @@ function Form() {
      name="no" value="no"/>
         <label for="petsNo">No</label>
           <div>
-            <button type="submit">Submit</button>
+            <button type="submit">Click here for a plant!</button>
           </div>
       </form>      
     </div>
