@@ -1,6 +1,6 @@
 function Form() {
   return (
-    <div>
+    <div className="formContainer">
       <form action="">
         <p>Do you have any pets?</p>
         <input type="radio" id="yesPets"

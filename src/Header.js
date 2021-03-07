@@ -1,8 +1,10 @@
 const Header = () => {
   return (
-    <header>
-      <h1>Indoor P l a n t Generator ~</h1>
-    </header>
+    <div className="headerContainer">
+      <header>
+        <h1>Indoor Plant Generator</h1>
+      </header>
+    </div>
   )
 }
 export default Header;

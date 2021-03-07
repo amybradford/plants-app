@@ -31,6 +31,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <h2>Find a suitable indoor plant for your apartment!</h2>
       <Form /> 
       <ul>
         {plants.map((plant) => {
