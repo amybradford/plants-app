@@ -7,8 +7,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
 /* fonts */
-/* @import url('https://fonts.googleapis.com/css2?family=Spirax&display=swap'); */
-@import url("https://fonts.googleapis.com/css2?family=Faster+One&family=Spirax&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Unica+One&display=swap");
 /* app styles */
 html {
   background: url(./assets/background.jpg);
@@ -21,9 +20,9 @@ html {
   flex-direction: column;
   align-items: center;
   width: 50%;
-  background: #a599cf;
-  border: 50px solid #9ec4b2;
+  background: rgba(255, 255, 255, 0.3);
   margin: 100px auto;
+  border-radius: 20px;
 }
 /* header styles */
 header {
@@ -32,13 +31,15 @@ header {
 }
 
 h1 {
-  /* font-family: 'Spirax', cursive; */
-  font-family: 'Faster One', cursive;
+  font-family: 'Unica One', cursive;
+  color: mediumaquamarine;
   font-size: 2.5rem;
   margin: 0;
+  text-align: center;
 }
 
 h2 {
+  
   text-align: center;
   font-size: 1.3rem;
 }
@@ -51,6 +52,13 @@ ul {
 }
 form {
   text-align: center;
+}
+
+button {
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 10px;
+
 }
  /* footer styles */
 footer {

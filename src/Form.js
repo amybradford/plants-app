@@ -1,16 +1,31 @@
-function Form() {
+import React, { useState } from 'react'; 
+
+function Form(props) {
+  // created a new state for the user selection on form element
+  const [userInput, setUserInput] = useState('');
+  //created a function to generate the userinput choice on submit
+  //added preventDefault so the page doesn't reload
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    props.generatePlant(userInput);
+  }
+  //created a function to target the userinput state when selected
+  const handleChange = (e) => {
+    setUserInput(e.target.value)
+    
+  }
   return (
     <div className="formContainer">
-      <form action="">
+      <form onSubmit={handleSubmit} action="">
         <p>Do you have any pets?</p>
         <input type="radio" id="yesPets"
-     name="yes" value="yes"/>
+     name="select" value="petSafePlants" onChange={handleChange}/>
         <label htmlFor="pets">Yes</label>
         <input type="radio" id="noPets"
-     name="no" value="no"/>
+     name="select" value="toxicPlants" onChange={handleChange}/>
         <label htmlFor="petsNo">No</label>
           <div>
-            <button type="submit">Click here for a plant!</button>
+            <button >Click here for a plant!</button>
           </div>
       </form>      
     </div>
@@ -18,7 +33,3 @@ function Form() {
 }
 
 export default Form;
- 
-// need to work on form element
-// PLAN: make a radio function - two options YES or NO buttons
-// can only select one of them
