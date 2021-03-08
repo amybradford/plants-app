@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; 
+import React, { useState } from 'react';
 
 function Form(props) {
   // created a new state for the user selection on form element
@@ -18,15 +18,15 @@ function Form(props) {
     <div className="formContainer">
       <form onSubmit={handleSubmit} action="">
         <p>Do you have any pets?</p>
-        <input type="radio" id="yesPets"
-     name="select" value="petSafePlants" onChange={handleChange}/>
-        <label htmlFor="pets">Yes</label>
-        <input type="radio" id="noPets"
-     name="select" value="toxicPlants" onChange={handleChange}/>
-        <label htmlFor="petsNo">No</label>
-          <div>
-            <button >Click here for a plant!</button>
-          </div>
+        <div>
+          <input type="radio" id="yesPets" name="select" value="petSafePlants" onChange={handleChange}/>
+          <label htmlFor="pets">Yes</label>
+          <input type="radio" id="noPets" name="select" value="toxicPlants" onChange={handleChange}/>
+          <label htmlFor="petsNo">No</label>
+        </div>
+        <div>
+          <button>Click here for a plant</button>
+        </div>
       </form>      
     </div>
   );
