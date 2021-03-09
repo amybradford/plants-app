@@ -16,13 +16,18 @@ function Form(props) {
   }
   return (
     <div className="formContainer">
+      <h2>Find an indoor plant for your apartment</h2>
       <form onSubmit={handleSubmit} action="">
         <p>Do you have any pets?</p>
-        <div class="inputStyles">
-          <input type="radio" id="yesPets" name="select" value="petSafePlants" onChange={handleChange}/>
-          <label htmlFor="pets">Yes</label>
-          <input type="radio" id="noPets" name="select" value="toxicPlants" onChange={handleChange}/>
-          <label htmlFor="petsNo">No</label>
+        <div className="inputStyles">
+          <div className="formYes">
+            <input type="radio" id="yesPets" name="select" value="petSafePlants" onChange={handleChange}/>
+            <label htmlFor="pets">Yes</label>
+          </div>
+          <div className="formNo">
+            <input type="radio" id="noPets" name="select" value="toxicPlants" onChange={handleChange}/>
+            <label htmlFor="petsNo">No</label>
+          </div>
         </div>
         <div>
           <button>Click here for a plant</button>

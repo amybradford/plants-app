@@ -34,18 +34,19 @@ function App() {
        
   return (
     <div className="App">
-      <Header />      
+      <Header />       
       <div className="plantContent">
         <Form generatePlant={generatePlant}/> 
-        <div>
+        <div className="dynamicContent">
+          <img src="" alt=""/>
           <h2>{chosenPlant.name}</h2>            
           <h3>{chosenPlant.light}</h3>                   
           <h3>{chosenPlant.water}</h3>
           <h3>{chosenPlant.temperature}</h3>
           <h3>{chosenPlant.fact}</h3>
-        </div>
+        </div>        
       </div>
-      <Footer />    
+        <Footer /> 
     </div>
         
   );

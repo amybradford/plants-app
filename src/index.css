@@ -7,11 +7,10 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
 /* fonts */
-@import url("https://fonts.googleapis.com/css2?family=Palanquin:wght@100&family=Raleway:wght@200&family=Unica+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Unica+One&family=Work+Sans:wght@300&display=swap");
 /* app styles */
 html {
-  background: url(./assets/background.jpg);
-  background-size: cover;
+  background: #EDE7D9;
 }
 
 .App {
@@ -20,7 +19,6 @@ html {
   flex-direction: column;
   align-items: center;
   width: 50%;
-  /* background: #0006; */
   margin: 100px auto;
   border-radius: 20px;
 }
@@ -33,62 +31,65 @@ header {
 h1 {
   font-family: 'Unica One', cursive;
   font-size: 8rem;
-  margin: 0;
+  margin: -110px;
   text-align: center;
-  /* color: #FFFAFA; */
   color: #000C;
 }
 
 .firstH2 {
-  margin-top: -25px;
+  margin-top: 5px;
   padding: 10px;
   font-weight: bold;
 }
 
 .iconContainer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-top: 130px;
+  color: #000C;
+  width: 500px;
 }
 
 img {
-  width: 15%;
+  position: absolute;
 }
 
 h2 {  
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   text-align: center;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 1.3rem;
-  margin-top: 0; 
+  margin-top: 20px; 
 }
 h3 {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 200;
+  font-family: 'Work Sans', sans-serif;
   font-size: 1rem;
   text-align: center;
 }
 
 .plantContent {
-  color: white;
   border-radius: 10px;
   width: 500px;
-}
-
-/* dynamic content styles */
-form {
-  text-align: center;
-  font-family: 'Palanquin', sans-serif;
-  background: #0005;
-  color: #FFFAFA;
+  overflow: auto;
+  background: #B1CCBC;
   border-radius: 10px;
   padding: 100px 50px;
   margin-top: 50px;
 }
 
+/* dynamic content styles */
+
+.formContainer h2 {
+  margin-top: -70px;
+}
+form {
+  text-align: center;
+  font-family: 'Work Sans', sans-serif;  
+}
+
 form p {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 200;
-  font-size: 1.5rem;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.3rem;
   margin: 0;
 }
 
@@ -98,17 +99,19 @@ form p {
 
 button {
   padding: 10px;
-  border: 2px solid white;
+  border: 2px solid #EDE7D9;
+  background-color: #EDE7D9;
   border-radius: 10px;
 
 }
  /* footer styles */
 footer {
   position: absolute;
-  bottom: 10%;
+  bottom: 25px;
+  font-family:'Work Sans', sans-serif;
 }
 
-footer a {
+footer a {  
   text-decoration: none;
   color: black;
   padding: 5px 0;

@@ -1,17 +1,19 @@
-import icon from './assets/leaf-icon.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLeaf } from '@fortawesome/free-solid-svg-icons'; 
 
 const Header = () => {
   return (
     <div className="headerContainer">
       <header>
-        <h1>  S p r o u t </h1>
-        <h2 className="firstH2">Find an indoor plant for your apartment</h2>
+        <h1>  S p r o u t </h1>        
         <div className="iconContainer">
-          <img src={icon} alt="leaf stencil"/>   
-          <img src={icon} alt="leaf stencil"/>  
-          <img src={icon} alt="leaf stencil"/>  
-          <img src={icon} alt="leaf stencil"/> 
-        </div>    
+        <FontAwesomeIcon icon={faLeaf}/>
+        <FontAwesomeIcon icon={faLeaf}/>
+        <FontAwesomeIcon icon={faLeaf}/> 
+        <FontAwesomeIcon icon={faLeaf}/>
+        <FontAwesomeIcon icon={faLeaf}/>
+        <FontAwesomeIcon icon={faLeaf}/>       
+      </div>   
       </header>
     </div>
   )
