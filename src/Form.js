@@ -18,7 +18,7 @@ function Form(props) {
     <div className="formContainer">
       <form onSubmit={handleSubmit} action="">
         <p>Do you have any pets?</p>
-        <div>
+        <div class="inputStyles">
           <input type="radio" id="yesPets" name="select" value="petSafePlants" onChange={handleChange}/>
           <label htmlFor="pets">Yes</label>
           <input type="radio" id="noPets" name="select" value="toxicPlants" onChange={handleChange}/>

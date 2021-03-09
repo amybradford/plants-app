@@ -4,6 +4,7 @@ import firebase from './firebase';
 import Form from './Form';
 import Footer from './Footer';
 
+
 function App() {
   const [plants, setPlants] = useState([]);
   useEffect(() => {
@@ -33,15 +34,16 @@ function App() {
        
   return (
     <div className="App">
-      <Header />
-      <h2>Find a suitable indoor plant for your apartment</h2>
-      <Form generatePlant={generatePlant}/> 
-      <div>
-        <h2>{chosenPlant.name}</h2>
-        <h3>Sunlight: {chosenPlant.light}</h3>                   
-        <h3>Water: {chosenPlant.water}</h3>
-        <h3>Temp: {chosenPlant.temperature}</h3>
-        <h3>Fact: {chosenPlant.fact}</h3>
+      <Header />      
+      <div className="plantContent">
+        <Form generatePlant={generatePlant}/> 
+        <div>
+          <h2>{chosenPlant.name}</h2>            
+          <h3>{chosenPlant.light}</h3>                   
+          <h3>{chosenPlant.water}</h3>
+          <h3>{chosenPlant.temperature}</h3>
+          <h3>{chosenPlant.fact}</h3>
+        </div>
       </div>
       <Footer />    
     </div>

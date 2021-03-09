@@ -7,7 +7,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
 /* fonts */
-@import url("https://fonts.googleapis.com/css2?family=Palanquin:wght@100&family=Raleway:wght@100&family=Unica+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Palanquin:wght@100&family=Raleway:wght@200&family=Unica+One&display=swap");
 /* app styles */
 html {
   background: url(./assets/background.jpg);
@@ -20,7 +20,7 @@ html {
   flex-direction: column;
   align-items: center;
   width: 50%;
-  background: rgba(255, 255, 255, 0.3);
+  /* background: #0006; */
   margin: 100px auto;
   border-radius: 20px;
 }
@@ -32,27 +32,68 @@ header {
 
 h1 {
   font-family: 'Unica One', cursive;
-  font-size: 4rem;
+  font-size: 8rem;
   margin: 0;
   text-align: center;
+  /* color: #FFFAFA; */
+  color: #000C;
+}
+
+.firstH2 {
+  margin-top: -25px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+img {
+  width: 15%;
 }
 
 h2 {  
   font-family: 'Raleway', sans-serif;
-  font-weight: 100;
   text-align: center;
+  font-weight: 200;
   font-size: 1.3rem;
+  margin-top: 0; 
 }
-
 h3 {
-  font-family: 'Palanquin', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
   font-size: 1rem;
   text-align: center;
+}
+
+.plantContent {
+  color: white;
+  border-radius: 10px;
+  width: 500px;
 }
 
 /* dynamic content styles */
 form {
   text-align: center;
+  font-family: 'Palanquin', sans-serif;
+  background: #0005;
+  color: #FFFAFA;
+  border-radius: 10px;
+  padding: 100px 50px;
+  margin-top: 50px;
+}
+
+form p {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.inputStyles {
+  padding: 20px;
 }
 
 button {
