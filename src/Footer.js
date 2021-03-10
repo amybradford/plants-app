@@ -1,7 +1,7 @@
 const Footer = () => {
   return (      
-    <footer>Created at <a href="https://junocollege.com/">Juno College</a> 
-    <i class="fab fa-pagelines"></i></footer>
+    <footer>Created by Amy Bradford at <a href="https://junocollege.com/">Juno College</a> 
+    </footer>
   )
 }
 export default Footer;

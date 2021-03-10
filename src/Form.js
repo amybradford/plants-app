@@ -6,10 +6,14 @@ function Form(props) {
   //created a function to generate the userinput choice on submit
   //added preventDefault so the page doesn't reload
   const handleSubmit = (e) => {
-    e.preventDefault();
-    props.generatePlant(userInput);
+    e.preventDefault();    
+    if (userInput === '') {
+      return 
+    } else {  
+      props.generatePlant(userInput);  
   }
-  //created a function to target the userinput state when selected
+}
+//created a function to target the userinput state when selected
   const handleChange = (e) => {
     setUserInput(e.target.value)
     
@@ -22,7 +26,7 @@ function Form(props) {
         <div className="inputStyles">
           <div className="formYes">
             <input type="radio" id="yesPets" name="select" value="petSafePlants" onChange={handleChange}/>
-            <label htmlFor="pets">Yes</label>
+            <label htmlFor="petsYes">Yes</label>
           </div>
           <div className="formNo">
             <input type="radio" id="noPets" name="select" value="toxicPlants" onChange={handleChange}/>

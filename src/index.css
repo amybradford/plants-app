@@ -7,10 +7,13 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
 /* fonts */
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Unica+One&family=Work+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Unica+One&family=Work+Sans:wght@300;700&display=swap");
+
 /* app styles */
 html {
   background: #EDE7D9;
+  background-image: url(./assets/daisies.png);
+  background-size: contain;
 }
 
 .App {
@@ -31,7 +34,7 @@ header {
 h1 {
   font-family: 'Unica One', cursive;
   font-size: 8rem;
-  margin: -110px;
+  margin: -95px;
   text-align: center;
   color: #000C;
 }
@@ -42,18 +45,6 @@ h1 {
   font-weight: bold;
 }
 
-.iconContainer {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 130px;
-  color: #000C;
-  width: 500px;
-}
-
-img {
-  position: absolute;
-}
-
 h2 {  
   font-family: 'Work Sans', sans-serif;
   text-align: center;
@@ -61,26 +52,43 @@ h2 {
   font-size: 1.3rem;
   margin-top: 20px; 
 }
+
 h3 {
   font-family: 'Work Sans', sans-serif;
   font-size: 1rem;
+  font-weight: normal;
   text-align: center;
 }
-
+/* main / dynamic content styles */
 .plantContent {
   border-radius: 10px;
   width: 500px;
   overflow: auto;
   background: #B1CCBC;
   border-radius: 10px;
-  padding: 100px 50px;
-  margin-top: 50px;
+  padding: 100px 50px 30px 50px;
+  margin-top: 100px;
+  color: #000C;
 }
 
-/* dynamic content styles */
+.plantImage img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 
+.dynamicContent h2 {
+  font-weight: 700;
+}
+
+/* form styles */
 .formContainer h2 {
+  font-weight: 700;
+  color: #000C;
   margin-top: -70px;
+  border-bottom: 1px dashed #000c;
+  border-bottom-width: 5px;
+  padding-bottom: 20px;
 }
 form {
   text-align: center;
@@ -92,9 +100,12 @@ form p {
   font-size: 1.3rem;
   margin: 0;
 }
-
 .inputStyles {
   padding: 20px;
+}
+
+.formYes {
+  margin-bottom: 20px;
 }
 
 button {
@@ -102,7 +113,12 @@ button {
   border: 2px solid #EDE7D9;
   background-color: #EDE7D9;
   border-radius: 10px;
+  cursor: pointer;
+}
 
+button:hover {
+  background: none;
+  color: #EDE7D9;
 }
  /* footer styles */
 footer {
