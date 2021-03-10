@@ -14,6 +14,7 @@ html {
   background: #EDE7D9;
   background-image: url(./assets/daisies.png);
   background-size: contain;
+  scrollbar-width: none; 
 }
 
 .App {
@@ -56,14 +57,15 @@ h2 {
 h3 {
   font-family: 'Work Sans', sans-serif;
   font-size: 1rem;
+  margin: 0;
   font-weight: normal;
   text-align: center;
 }
 /* main / dynamic content styles */
 .plantContent {
-  border-radius: 10px;
+  max-height: 660px;
   width: 500px;
-  overflow: auto;
+  border-radius: 10px;
   background: #B1CCBC;
   border-radius: 10px;
   padding: 100px 50px 30px 50px;
@@ -71,10 +73,15 @@ h3 {
   color: #000C;
 }
 
-.plantImage img {
-  height: 100%;
-  width: 100%;
+.dynamicContent img {
+  height: 200px;
+  width: 200px;
   object-fit: cover;
+  padding-left: 0px;
+  margin-left: 25%;
+  margin-top: 5%;
+  border-radius: 10px;
+  filter: drop-shadow(10px 10px 1px #EDE7D9);
 }
 
 .dynamicContent h2 {
@@ -90,6 +97,7 @@ h3 {
   border-bottom-width: 5px;
   padding-bottom: 20px;
 }
+
 form {
   text-align: center;
   font-family: 'Work Sans', sans-serif;  
@@ -97,11 +105,19 @@ form {
 
 form p {
   font-family: 'Work Sans', sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   margin: 0;
 }
+
+label {
+  margin-left: 5px;
+  margin-right: 20px;
+}
+
 .inputStyles {
-  padding: 20px;
+  padding: 20px 20px 0px 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .formYes {
@@ -109,6 +125,7 @@ form p {
 }
 
 button {
+  font-family: 'Work Sans', sans-serif;
   padding: 10px;
   border: 2px solid #EDE7D9;
   background-color: #EDE7D9;
@@ -120,10 +137,17 @@ button:hover {
   background: none;
   color: #EDE7D9;
 }
+
+/* icon styles */
+.icon {
+  color: #EDE7D9;
+  margin-right: 10px;  
+}
+
  /* footer styles */
 footer {
   position: absolute;
-  bottom: 25px;
+  bottom: -5px;
   font-family:'Work Sans', sans-serif;
 }
 
@@ -131,4 +155,71 @@ footer a {
   text-decoration: none;
   color: black;
   padding: 5px 0;
+}
+/* media queries */
+@media (max-width: 680px) {
+  h1 {
+    font-size: 6rem;
+    margin: -45px;
+  }
+  .plantContent {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 620px) {
+  h1 {
+    font-size: 5rem;
+  }
+  .plantContent {
+    width: 400px;
+  }
+  img.plantImage {
+    margin-left: 17%;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 4rem;
+  }
+  .plantContent {
+    width: 300px;
+  }
+  img.plantImage {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  footer {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 350px) {
+  h1 {
+    font-size: 3rem;
+  }
+  .firstH2 {
+    font-size: 1.2rem;
+  }
+  .dynamicContent h2 {
+    margin-bottom: 10px;
+  }
+  form p,
+  button {
+    font-size: 0.9rem;
+  }
+  .plantContent {
+    width: 250px;
+  }
+  img.plantImage {
+    width: 150px;
+    height: 150px;
+  }
+  h3 {
+    font-size: 0.8rem;
+  }  
 }
