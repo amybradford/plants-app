@@ -19,9 +19,7 @@ function App() {
     setPlants(plantObject); 
     })
   }, [])
-  // created a new state for the chosen plant that would show on the page
   const [chosenPlant, setChosenPlant] = useState({});
-  // created another new state to track changes of randomPlant
   const [randomPlant, setRandomPlant] = useState(0);
 
   const randomNumber = (maxNumberOfPlants) => {
@@ -29,20 +27,15 @@ function App() {
   }
 
   const generatePlant = (userInput) => {
-    // create a variable to show the max number of plants in the object
     const maxNumberOfPlants = Object.keys(plants[userInput]).length;
-    // created a while loop so that the same plant wasn't randomly chosen in succession
     let newRandomNumber = randomNumber(maxNumberOfPlants);  
     while (newRandomNumber === randomPlant) {
       newRandomNumber = randomNumber(maxNumberOfPlants);
     } 
     setRandomPlant(newRandomNumber); 
-    // create a variable to show the name of a random plant
     const randomKey = Object.keys(plants[userInput])[randomPlant];
-    // create a variable to show the contents of a random plant object
     const newPlant = (plants[userInput][randomKey]);
-    setChosenPlant(newPlant);
-    // console.log(newPlant);    
+    setChosenPlant(newPlant);  
   }  
 
   return (

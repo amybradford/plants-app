@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 
 function Form(props) {
-  // created a new state for the user selection on form element
   const [userInput, setUserInput] = useState('');
-  //created a function to generate the userinput choice on submit
-  //added preventDefault so the page doesn't reload
   const handleSubmit = (e) => {
     e.preventDefault();    
     if (userInput === '') {
@@ -13,7 +10,6 @@ function Form(props) {
       props.generatePlant(userInput);  
   }
 }
-//created a function to target the userinput state when selected
   const handleChange = (e) => {
     setUserInput(e.target.value)
     
