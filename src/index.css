@@ -145,6 +145,7 @@ button:hover {
 
  /* footer styles */
 footer {
+  text-align: center;
   padding-top: 60px;
   font-family:'Work Sans', sans-serif;
 }
