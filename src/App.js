@@ -9,7 +9,6 @@ import { faTint } from '@fortawesome/free-solid-svg-icons';
 import { faThermometerHalf } from '@fortawesome/free-solid-svg-icons';
 import { faLeaf } from '@fortawesome/free-solid-svg-icons';
 
-
 function App() {
   const [plants, setPlants] = useState([]);
   useEffect(() => {
@@ -25,7 +24,6 @@ function App() {
   const randomNumber = (maxNumberOfPlants) => {
     return Math.floor(Math.random() * maxNumberOfPlants);
   }
-
   const generatePlant = (userInput) => {
     const maxNumberOfPlants = Object.keys(plants[userInput]).length;
     let newRandomNumber = randomNumber(maxNumberOfPlants);  
@@ -68,7 +66,7 @@ function App() {
             {chosenPlant.fact}</h3>
         </div>        
       </div>
-        <Footer /> 
+      <Footer /> 
     </div>
         
   );
